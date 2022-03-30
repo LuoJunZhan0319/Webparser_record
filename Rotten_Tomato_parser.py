@@ -1,6 +1,25 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# In[ ]:
+
+
+#記錄用，裡面需要install的套件有requests,bs4,selenium
+#其中selenium需要配合driver做使用、依據你會使用瀏覽器安裝即可
+#因資料室利用google chrom抓取，故需載入chromdriver，版本可查詢你使用的對應瀏覽器本版即可
+#若都有安裝，下列程式皆可正常執行
+
+########################################
+#讀取資料的方法
+# c = []
+# with open('inside out.txt', 'r',encoding="utf-8") as f:
+#     a = f.readlines()
+
+# for i in a:
+#     c.append(i)
+########################################
+
+
 # In[125]:
 
 
@@ -60,9 +79,9 @@ while(a==0):
 
 driver.quit()
 
-
-# In[ ]:
-
-
-
+#儲存成txt檔 ->檔案會在當前檔案位置
+with open(movie+'.txt', 'w',encoding="utf-8") as f:
+    for i in review:
+        f.write(i)
+        f.write("\n")
 
